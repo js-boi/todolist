@@ -1,7 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*, *:before, *:after {
--webkit-box-sizing: border-box;
-box-sizing: border-box
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
 }
 
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* アプリを中央配置 */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #39e;
+}
+
+.todolistContainer {
+  width: 400px;
+  padding: 24px 32px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+
+.todolistContainer .title {
+  text-align: center;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* ーーーーーーーーーーーーーーーー
+    文字入力エリア（inputFields） 
+   ーーーーーーーーーーーーーーーー */
+   
+.todolistContainer .inputFields {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  margin: 16px 0;
+}
+
+.todolistContainer .inputArea {
+  width: calc(100% - 60px);
+  height: 100%;
+  padding: 0 12px;
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 4px;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.todolistContainer button.btn {
+  width: 50px;
+  height: 100%;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0, .1);
+  background-color: #39e;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.todolistContainer .content ul li {
+  display: block;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: #eee;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
