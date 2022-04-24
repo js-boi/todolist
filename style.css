@@ -29,17 +29,19 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
 
-
+/* タイトル */
 .todolistContainer .title {
   text-align: center;
   font-weight: 800;
   text-align: center;
+  color: #333;
 }
+
 
 /* ーーーーーーーーーーーーーーーー
     文字入力エリア（inputFields） 
    ーーーーーーーーーーーーーーーー */
-   
+
 .todolistContainer .inputFields {
   display: flex;
   justify-content: space-between;
@@ -57,24 +59,59 @@
   outline: none;
 }
 
+.todolistContainer .inputArea:focus {
+  border: 1px solid #39e;
+}
+
 .todolistContainer button.btn {
   width: 50px;
   height: 100%;
   border: none;
   border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0,0,0, .1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .1);
   background-color: #39e;
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
   opacity: .8;
+  transition: .6;
+}
+
+.todolistContainer button.btn:hover {
+  opacity: 1;
 }
 
 .todolistContainer .content ul li {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 8px 0;
-  padding: 12px;
+  padding-left: 16px;
   border-radius: 4px;
   background-color: #eee;
   border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.todolistContainer .content ul li .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  width: 50px;
+  height: 100%;
+  background-color: #f74;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  visibility: hidden;
+}
+
+.todolistContainer .content ul li:hover .icon {
+  visibility: visible;
+}
+
+.todolistContainer .content .pendingText {
+  margin-top: 20px;
+  font-weight: 500;
+  text-transform: capitalize; 
 }
